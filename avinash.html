@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random HTML File</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #4caf50;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Random HTML Page</h1>
+    <p>This is a simple HTML page created for demonstration purposes.</p>
+    <button onclick="displayMessage()">Click Me!</button>
+    <p id="message"></p>
+    <script>
+        function displayMessage() {
+            const messages = [
+                "Hello, World!",
+                "Today is a great day!",
+                "Keep smiling! 😊",
+                "You're doing awesome!",
+                "Stay positive and keep learning!"
+            ];
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('message').innerText = randomMessage;
+        }
+    </script>
+</body>
+</html>
